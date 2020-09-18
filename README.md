@@ -31,5 +31,14 @@ https://miniwebtool.com/django-secret-key-generator/ to generate a secret key. N
 
 Then, within this main directory (very important you run these commands within the directory that has the manage.py file), run `python3 manage.py migrate` for good measure, you'll be able to run `python3 manage.py runserver` and navigate to http://localhost:8000 (unless you specify another port for some reason) and it'll be up and running!
 
+In this backend, you will be able to use the endpoints (/conversations, /messages, /thoughts) to view objects. These have full CRUD, and you can test them in programs like Postman or Insomnia. Keep in mind, for POST and PUT/PATCH, you will need to include a final '/' at the end of the URL for it to succeed. And, if you're POSTing an object that requires a foreign key (e.g. a message requires a conversation and a thought requires a message), you will need to include the id of the related object you want to use, and set it up as such:
+```
+{
+    ...
+    "conversation": 1,
+    ...
+}
+```
+And of course, if you want to PUT/PATCH or DELETE, you will need the object's id in the url (e.g. /messages/2).
 
 Then you can fork and clone the frontend repo here: https://github.com/alexiscait142/remesh_frontend
