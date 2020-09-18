@@ -1,6 +1,6 @@
 # Setting up this Python/Django backend
 
-In order to set up this backend, you will need the most recent versions of Python and Pip (I use Python3 and Pip3).
+In order to set up this backend, you will need the most recent versions of Python and Pip (I use Python3 and Pip3). This also uses a sqlite3 database.
 
 Create a directory for your project (which will hold both the backend and frontend folders). The first step will be to create a virtual environment for the Django project.
 
