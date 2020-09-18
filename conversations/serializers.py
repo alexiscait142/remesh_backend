@@ -7,14 +7,6 @@ from .models import (
     Thought
 )
 
-class ConversationSerializer(serializers.ModelSerializer):
-    """ Conversation serializer """
-
-    class Meta:
-        model = Conversation
-        fields = ['id', 'title', 'start_date', 'messages']
-        depth = 1
-
 class ThoughtSerializer(serializers.ModelSerializer):
     """ Thought serializer """
 
@@ -30,3 +22,13 @@ class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
         fields = ['id', 'conversation', 'text', 'date_time_created', 'thoughts']
+
+class ConversationSerializer(serializers.ModelSerializer):
+    """ Conversation serializer """
+
+    messages = MessageSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Conversation
+        fields = ['id', 'title', 'start_date', 'messages']
+        # depth = 2
