@@ -43,6 +43,12 @@ And of course, if you want to PUT/PATCH or DELETE, you will need the object's id
 
 You *will not* have to include the dates for any of the objects as they are automatically filled in with the date/time at which they are created.
 
+Four tests are available in the tests.py file, located in the conversations app directory. In order to run these tests, run the command:
+```
+python manage.py test
+```
+within the directory that contains the manage.py file. Doc string descriptions can be found in each of the tests.
+
 Then you can fork and clone the frontend repo here: https://github.com/alexiscait142/remesh_frontend
 
 
