@@ -33,3 +33,8 @@ Then, within this main directory (very important you run these commands within t
 
 
 Then you can fork and clone the frontend repo here: https://github.com/alexiscait142/remesh_frontend
+
+Additional packages used in this project:
+python-decouple (https://pypi.org/project/python-decouple/)
+djangorestframework (https://www.django-rest-framework.org/)
+django-cors-headers (https://pypi.org/project/django-cors-headers/0.01/)
