@@ -41,6 +41,8 @@ In this backend, you will be able to use the endpoints (/conversations, /message
 ```
 And of course, if you want to PUT/PATCH or DELETE, you will need the object's id in the url (e.g. /messages/2).
 
+You *will not* have to include the dates for any of the objects as they are automatically filled in with the current date/time.
+
 Then you can fork and clone the frontend repo here: https://github.com/alexiscait142/remesh_frontend
 
 
